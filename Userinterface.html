@@ -100,6 +100,18 @@ slider5.oninput = function() {
 </script>
     <button type="submit" value="Submit" style="position: absolute; left:605px; top: 490px">Submit</button>
 <button type="button" value="submit" style="position: absolute; left:612.5px; top: 520px">Run</button>
-
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "f13c47bc-bbe4-45d3-a8e9-d51557b156ba", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "353d6207-d4f1-4afd-b28f-cd9458226b0b", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
 </body>
 </html>
